@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Explorer: Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./TASK_LOGO.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body class="dark">
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./TASK_LOGO.png" alt="" width="40px" />
+        </div>
+        <div class="text">
+          <h1>TASK</h1>
+          <p>Manager</p>
+        </div>
+      </nav>
+      <nav>
+        <!-- <button id="addBtn">Add Task</button> -->
+        <button id="themeBtn">
+          <i id="icon" class="fa-solid fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div class="container">
+        <!-- Statistics Section -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <p class="stat-label">Total</p>
+            <p id="totalTasks" class="stat-value">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Completed</p>
+            <p id="completedTasks" class="stat-value">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Pending</p>
+            <p id="pendingTasks" class="stat-value">0</p>
+          </div>
+        </section>
+
+        <!-- Task Input -->
+        <section class="input-section">
+          <div class="input-group">
+            <input
+              class="task-input"
+              placeholder="What needs to be done?"
+              type="text"
+            />
+            <select id="">
+              <option value="work">Work</option>
+              <option value="personal">Personal</option>
+              <option value="urgent">Urgent</option>
+            </select>
+            <button class="btn-add">Add Task</button>
+          </div>
+        </section>
+        <!-- Filter Section -->
+
+        <section class="filter-section">
+          <div class="tabs">
+            <button class="tab-btn active" id="all-btn">All</button>
+            <button class="tab-btn" id="completed-btn">Completed</button>
+            <button class="tab-btn" id="pending-btn">Pending</button>
+          </div>
+          <button class="clear-btn">Clear Completed</button>
+        </section>
+        <!-- Empty State -->
+
+        <section class="empty-state">
+          <img
+            alt="Empty Task Illustration"
+            class="empty-illustration"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmtX3sdU2JeFq0CiZCyqSBMDTY79AKDFLjQ64XdjJGTkyDzcCcIyqGlsMOtVPcgKvIRxJ6np3lEnKXtqoge0LrFPoBD2YyMnN23aaRRKYlC9h8pAc5az_-roExLeA_wPjt7ax9EfO2WYi0XgrByj4sqQVZEQY34Q87ydkan683VBGTjNRlZ5hgL32ILA3wY_SPsq_ofvZ2v0c0N6vL8K7kEX8BCjv0mC-OwcNdyX1ygn6xI_AFntfzqRReO2IrC6NKW4syGDId6FU"
+          />
+          <div class="text-center">
+            <p class="empty-title">Your task list is empty.</p>
+            <p class="empty-subtitle">Add a task to get started!</p>
+          </div>
+        </section>
+        <section class="task-list">
+          <!-- Tasks yaha dynamically add honge -->
+          <!-- <div class="task-card" data-id="${taskCard.id}">
+            <div class="task-info" >
+              <h3 class="${taskCard.completed ? "completed" : ""}">${taskCard.task}</h3>
+              <span class="category">${taskCard.category}</span>
+            </div>
+            <div class="task-actions">
+              <button class="complete-btn ${taskCard.completed ? "done" : ""}">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="edit-btn"${taskCard.completed ? "disabled" : ""}>
+              <i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="delete-btn">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
+          </div> -->
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
