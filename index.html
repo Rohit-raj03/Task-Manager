@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
   </head>
-  <body class="dark">
+  <body class="">
     <header>
       <nav>
         <div class="logo">
@@ -114,6 +114,48 @@
         </section>
       </div>
     </main>
+    <section class="bottom">
+      <section class="pipeline">
+        <h2>Browser Rendering Pipeline</h2>
+        <div class="flow-step">HTML Parsing</div>
+        <div class="arrow">↓</div>
+        <div class="flow-step">Tokenization</div>
+        <div class="arrow">↓</div>
+        <div class="flow-step">DOM Tree</div>
+        <div class="arrow">↓</div>
+        <div class="flow-step">CSSOM Tree</div>
+        <div class="arrow">↓</div>
+        <div class="flow-step">Render Tree</div>
+      </section>
+      <section class="tech-panel">
+        <div class="comparison-card">
+          <h2>input.value vs getAttribute('value')</h2>
+          <div class="code-grid">
+            <div class="code-box">
+              <pre>input.value Current value updated live</pre>
+            </div>
+            <div class="code-box">
+              <pre>
+input.getAttribute("value") Original HTML value doesn't update automatically</pre
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <h2>Event Bubbling vs Capturing</h2>
+          <div class="event-demo">
+            <div class="grandparent">
+              Grandparent
+              <div class="parent">
+                Parent
+                <button class="child">Child Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
 
     <script src="./script.js"></script>
   </body>

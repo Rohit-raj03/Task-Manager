@@ -417,3 +417,175 @@ select:focus {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* ===========================
+   Bottom Section Layout
+=========================== */
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ===========================
+   Common Card Style
+=========================== */
+
+.pipeline,
+.tech-panel > div {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pipeline h2,
+.comparison-card h2,
+.event-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* ===========================
+   Browser Rendering Pipeline
+=========================== */
+
+.flow-step {
+  background: var(--primary-light);
+  color: var(--text-primary);
+  padding: 0.9rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  transition: 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-2px);
+  background: var(--primary);
+  color: var(--text-white);
+}
+
+.arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin: 0.4rem 0;
+}
+
+/* ===========================
+   Tech Panel
+=========================== */
+
+.tech-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===========================
+   Code Comparison
+=========================== */
+
+.code-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.code-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.code-box pre {
+  white-space: pre-wrap;
+  color: var(--text-secondary);
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===========================
+   Event Bubbling Demo
+=========================== */
+
+.event-demo {
+  margin-top: 1rem;
+}
+
+.grandparent {
+  padding: 1.5rem;
+  background: var(--danger-light);
+  border: 2px solid var(--danger);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.parent {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: var(--warning-light);
+  border: 2px solid var(--warning);
+  border-radius: 10px;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+}
+
+.child {
+  margin-top: 1rem;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.child:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+  .buttom {
+    grid-template-columns: 1fr;
+  }
+
+  .code-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .pipeline,
+  .comparison-card,
+  .event-card {
+    padding: 1rem;
+  }
+
+  .flow-step {
+    font-size: 0.9rem;
+  }
+
+  .child {
+    width: 100%;
+  }
+}
