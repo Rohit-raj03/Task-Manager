@@ -405,7 +405,6 @@ select:focus {
   opacity: 0.6;
 }
 .done {
-  background: var();
   color: white;
 }
 .task-card.completed.edit-btn {
@@ -426,7 +425,7 @@ select:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
 }
 
 /* ===========================
@@ -565,7 +564,7 @@ select:focus {
 =========================== */
 
 @media (max-width: 992px) {
-  .buttom {
+  .bottom {
     grid-template-columns: 1fr;
   }
 
