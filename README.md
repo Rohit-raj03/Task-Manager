@@ -60,17 +60,6 @@ Task-Manager/
 
 ---
 
-## 📸 Screenshots
-
-### Light Mode
-
-Add your screenshot here
-
-### Dark Mode
-
-Add your screenshot here
-
----
 
 ## ⚙️ How It Works
 
